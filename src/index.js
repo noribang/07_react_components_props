@@ -9,9 +9,15 @@ import reportWebVitals from './reportWebVitals';
 //     <App />
 //   );
 
+
+const greeting = "Lunch time!!!"
+const className = "App"
 // JSX - JavaScript XML
 // Babel transpiles JSX to JavaScript.
-const element = <h1 id="header" className="App">Eat your lunch first!!!</h1>; 
+const element = <div>
+                  <h1 id="header" className={className}>This is: {greeting}</h1>
+                  <p className={className}>{1 + 1}</p>
+                </div> 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
