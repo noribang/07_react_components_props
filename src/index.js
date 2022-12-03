@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 // Variables
 const greeting = "Lunch time!!!"
 const className = "App"
+const subheading = "After lunch time..."
 // Functions
 function getColor(isRed) {
   if (isRed) {
@@ -32,15 +33,18 @@ function getColor(isRed) {
 const element = (
   <div>
     {createCard()}
+    {createCard("Sat afternoon.", "Panera bread")}
   </div>
 )
 
 // Function to render JSX
-function createCard(  ) {
+function createCard(params1="red", params2="black") {
   return (
-    <div className="card">
-      <h1 id="header" className="blue">createCard</h1>
-      <h2>Card subheading</h2>
+    <div className={className}>
+      <h1 id="header" className="blue">h1:{greeting}</h1>
+      <h1>{params1}</h1>
+      <h2>Card subheading:{subheading}</h2>
+      <h2>{params2}</h2>
     </div>
   );
 }
