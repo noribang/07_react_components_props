@@ -4,50 +4,41 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//     <App />
-//   );
+// write JSX to create an element that has the following properties:
+//   - a <ul> element with an id of about-me
+//   - inside the unordered list, three <li> elements with a class of about-me-item that display text about this user
 
-// Variables
-const greeting = "Lunch time!!!"
-const className = "App"
-const subheading = "After lunch time..."
-// Functions
-function getColor(isRed) {
-  if (isRed) {
-    return "red"
-  } else {
-    return "blue"
-  }
+const user = {
+  name: "Ian",
+  position: "Lead Instructor",
+  hometown: "Suttons Bay, MI"
 }
 
-// JSX - JavaScript XML
-// Babel transpiles JSX to JavaScript.
-// const element = (<>
-//                   <h1 id="header" className={className}>This is: {greeting}</h1>
-//                   <p className={className}>{1 + 1}</p>
-//                   <p className={className}>{getColor()}</p>
-//                   <p className={className}>{getColor(true)}</p>
-//                 </>) 
+function liUser(user) {
+  return (
+    <li className="about-me-item">{user}</li>
+  )
+}
+
 const element = (
   <div>
-    {createCard()}
-    {createCard("Sat afternoon.", "Panera bread")}
+    <ul id="about-me">
+      {liUser(user.name)}
+      {liUser(user.position)}
+      {liUser(user.hometown)}
+    </ul>
   </div>
 )
 
-// Function to render JSX
-function createCard(params1="red", params2="black") {
-  return (
-    <div className={className}>
-      <h1 id="header" className="blue">h1:{greeting}</h1>
-      <h1>{params1}</h1>
-      <h2>Card subheading:{subheading}</h2>
-      <h2>{params2}</h2>
-    </div>
-  );
-}
+// const element = (
+//   <div>
+//     <ul id="about-me">
+//       <li className="about-me-item">{user.name}</li>
+//       <li className="about-me-item">{user.position}</li>
+//       <li className="about-me-item">{user.hometown}</li>
+//     </ul>
+//   </div>
+// )
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
