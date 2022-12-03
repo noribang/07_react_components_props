@@ -9,15 +9,42 @@ import reportWebVitals from './reportWebVitals';
 //     <App />
 //   );
 
-
+// Variables
 const greeting = "Lunch time!!!"
 const className = "App"
+// Functions
+function getColor(isRed) {
+  if (isRed) {
+    return "red"
+  } else {
+    return "blue"
+  }
+}
+
 // JSX - JavaScript XML
 // Babel transpiles JSX to JavaScript.
-const element = <div>
-                  <h1 id="header" className={className}>This is: {greeting}</h1>
-                  <p className={className}>{1 + 1}</p>
-                </div> 
+// const element = (<>
+//                   <h1 id="header" className={className}>This is: {greeting}</h1>
+//                   <p className={className}>{1 + 1}</p>
+//                   <p className={className}>{getColor()}</p>
+//                   <p className={className}>{getColor(true)}</p>
+//                 </>) 
+const element = (
+  <div>
+    {createCard()}
+  </div>
+)
+
+// Function to render JSX
+function createCard(  ) {
+  return (
+    <div className="card">
+      <h1 id="header" className="blue">createCard</h1>
+      <h2>Card subheading</h2>
+    </div>
+  );
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
