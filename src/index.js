@@ -53,6 +53,8 @@ function Card(props) {
 
 const element = (
   <div>
+    <Card greeting="card component" subheader="using function"/>
+    <Card greeting="dallas beating..." subheader="the colts"/>
     {Card({greeting: "Hello", subheader: "NFL Sunday"})}
     {Card({greeting: "Cowboys", subheader: "Colts"})}
   </div>
