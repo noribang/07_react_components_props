@@ -41,7 +41,22 @@ import reportWebVitals from './reportWebVitals';
 //   </div>
 // )
 
+// Function component
+function Card(props) {
+  return (
+    <div>
+      <h1>{props.greeting}</h1>
+      <h2>{props.subheader}</h2>
+    </div>
+  )
+}
 
+const element = (
+  <div>
+    {Card({greeting: "Hello", subheader: "NFL Sunday"})}
+    {Card({greeting: "Cowboys", subheader: "Colts"})}
+  </div>
+)
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
