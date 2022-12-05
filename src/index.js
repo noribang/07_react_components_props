@@ -8,27 +8,28 @@ import reportWebVitals from './reportWebVitals';
 //   - a <ul> element with an id of about-me
 //   - inside the unordered list, three <li> elements with a class of about-me-item that display text about this user
 
-const user = {
-  name: "Ian",
-  position: "Lead Instructor",
-  hometown: "Suttons Bay, MI"
-}
+// const user = {
+//   name: "Ian",
+//   position: "Lead Instructor",
+//   hometown: "Suttons Bay, MI"
+// }
 
-function liUser(user) {
-  return (
-    <li className="about-me-item">{user}</li>
-  )
-}
+// function liUser(user) {
+//   return (
+//     <li className="about-me-item">{user}</li>
+//   )
+// }
 
-const element = (
-  <div>
-    <ul id="about-me">
-      {liUser(user.name)}
-      {liUser(user.position)}
-      {liUser(user.hometown)}
-    </ul>
-  </div>
-)
+// const element = (
+//   <div>
+//     <ul id="about-me">
+//       {liUser(user.name)}
+//       {liUser(user.position)}
+//       {liUser(user.hometown)}
+//       {liUser("Saggitarius")}
+//     </ul>
+//   </div>
+// )
 
 // const element = (
 //   <div>
@@ -39,6 +40,8 @@ const element = (
 //     </ul>
 //   </div>
 // )
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
